@@ -1,0 +1,112 @@
+/* ================================
+   Rose Gold Academia Theme
+   ================================ */
+
+:root {
+  --bg-main: #fffdfc;
+  --text-main: #3b2f2f;        /* dark brown */
+  --text-muted: #6b5a5a;
+
+  --accent: #c48a8a;          /* rose gold */
+  --accent-dark: #a96b6b;
+  --accent-soft: #f4eaea;
+
+  --card-bg: #ffffff;
+  --card-border: rgba(60, 40, 40, 0.08);
+}
+
+/* ---------- Global ---------- */
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family: "Inter", system-ui, sans-serif;
+  line-height: 1.7;
+}
+
+p {
+  color: var(--text-muted);
+}
+
+/* ---------- Headings ---------- */
+h1, h2, h3, h4, h5 {
+  font-family: "Playfair Display", serif;
+  color: var(--text-main);
+  letter-spacing: -0.01em;
+}
+
+.text-primary {
+  color: var(--accent) !important;
+}
+
+/* ---------- Sidebar / Navbar ---------- */
+#sideNav {
+  background: linear-gradient(180deg, #3b2f2f, #2a2020);
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: rgba(255,255,255,0.75);
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #ffffff;
+}
+
+/* ---------- Links ---------- */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+a:hover {
+  color: var(--accent-dark);
+  border-bottom-color: var(--accent-dark);
+}
+
+/* ---------- Section spacing ---------- */
+.resume-section {
+  padding-top: 4rem !important;
+  padding-bottom: 4rem !important;
+}
+
+/* ---------- Project cards ---------- */
+#projects .mb-4 {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 18px;
+  padding: 18px 20px;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+#projects .mb-4:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(60, 40, 40, 0.12);
+}
+
+/* ---------- Subheadings ---------- */
+.subheading {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent-dark);
+}
+
+/* ---------- Social icons ---------- */
+.social-icons .social-icon {
+  background-color: var(--accent-soft);
+  color: var(--accent-dark);
+  border-radius: 14px;
+}
+
+.social-icons .social-icon:hover {
+  background-color: var(--accent);
+  color: white;
+}
+
+/* ---------- Mobile polish ---------- */
+@media (max-width: 991px) {
+  h1 {
+    font-size: 3rem !important;
+  }
+}
