@@ -148,3 +148,9 @@ h3.mb-0,
 }
 
 */
+
+/* Prevent horizontal scroll on mobile */
+html, body {
+  overflow-x: hidden;
+}
+
