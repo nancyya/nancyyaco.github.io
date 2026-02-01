@@ -1,5 +1,5 @@
 /* ================================
-   Rose Gold Academia Theme
+   Rose Gold Academia Theme (FINAL)
    ================================ */
 
 :root {
@@ -7,7 +7,7 @@
   --text-main: #3b2f2f;        /* dark brown */
   --text-muted: #6b5a5a;
 
-  --accent: #c48a8a;          /* rose gold */
+  --accent: #c48a8a;           /* rose gold */
   --accent-dark: #a96b6b;
   --accent-soft: #f4eaea;
 
@@ -27,13 +27,14 @@ p {
   color: var(--text-muted);
 }
 
-/* ---------- Headings ---------- */
+/* ---------- Headings (fonts only) ---------- */
 h1, h2, h3, h4, h5 {
   font-family: "Playfair Display", serif;
   color: var(--text-main);
   letter-spacing: -0.01em;
 }
 
+/* Accent color used by the template */
 .text-primary {
   color: var(--accent) !important;
 }
@@ -44,7 +45,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .navbar-dark .navbar-nav .nav-link {
-  color: rgba(255,255,255,0.75);
+  color: rgba(255, 255, 255, 0.75);
 }
 
 .navbar-dark .navbar-nav .nav-link:hover {
@@ -75,7 +76,7 @@ a:hover {
   border: 1px solid var(--card-border);
   border-radius: 18px;
   padding: 18px 20px;
-  transition: transform .2s ease, box-shadow .2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 #projects .mb-4:hover {
@@ -83,12 +84,12 @@ a:hover {
   box-shadow: 0 12px 28px rgba(60, 40, 40, 0.12);
 }
 
-/* ---------- Subheadings ---------- */
+/* ---------- Subheadings (NOT ALL CAPS) ---------- */
 .subheading {
   font-family: "Inter", sans-serif;
   font-weight: 500;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  text-transform: none !important;   /* key fix */
   color: var(--accent-dark);
 }
 
@@ -101,7 +102,7 @@ a:hover {
 
 .social-icons .social-icon:hover {
   background-color: var(--accent);
-  color: white;
+  color: #ffffff;
 }
 
 /* ---------- Mobile polish ---------- */
@@ -112,37 +113,38 @@ a:hover {
 }
 
 /* ================================
-   Section title capitalization
+   Capitalization rules
    ================================ */
 
-/* Capitalize ONLY section headers (mb-5) */
+/* ONLY section titles (h2.mb-5) are uppercase */
 h2.mb-5 {
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
+  text-transform: uppercase !important;
+  letter-spacing: 0.12em !important;
   font-weight: 600;
 }
 
-/* Keep all other headings in normal case */
-h1, h3, h4, h5 {
-  text-transform: none;
-  letter-spacing: -0.01em;
-}
-
-/* ================================
-   Typography overrides
-   ================================ */
-
-/* Section titles only (h2.mb-5) stay uppercase */
-h2.mb-5 {
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  font-weight: 600;
-}
-
-/* Undo uppercase everywhere else */
-.subheading,
-h1, h3, h4, h5 {
+/* FORCE normal case for everything else that the template uppercases */
+.resume-section-content h1,
+.resume-section-content h3,
+.resume-section-content h4,
+.resume-section-content h5,
+h1, h3, h4, h5,
+h4.mb-1,
+h3.mb-0,
+#projects h4,
+#experience h3,
+#education h3,
+#publications strong {
   text-transform: none !important;
-  letter-spacing: normal;
+  letter-spacing: -0.01em !important;
 }
 
+/* Keep nav links as-is (template often uppercases them).
+   If you ALSO want nav links in normal case, uncomment below:
+
+#sideNav .navbar-nav .nav-link {
+  text-transform: none !important;
+  letter-spacing: 0.02em !important;
+}
+
+*/
