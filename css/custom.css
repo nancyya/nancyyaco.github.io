@@ -162,4 +162,85 @@ html, body {
 .hebrew-name {
     font-family: inherit;
 }
+<style>
+/* Sticky footer (always visible) */
+.sticky-footer{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1030; /* above content */
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+/* Divider line above footer */
+.footer-divider{
+    height: 1px;
+    background: rgba(0,0,0,0.10);
+}
+
+/* Footer layout */
+.footer-inner{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    gap: 12px;
+    align-items: center;
+}
+
+/* Side by side EN + HE */
+.footer-lang{
+    font-size: 0.95rem;
+    line-height: 1.2;
+    color: rgba(0,0,0,0.75);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.footer-en{ text-align: left; }
+.footer-he{ text-align: right; }
+
+/* Meta */
+.footer-meta{
+    font-size: 0.9rem;
+    color: rgba(0,0,0,0.65);
+    white-space: nowrap;
+}
+
+.footer-meta a{
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0,0,0,0.25);
+}
+.footer-meta a:hover{
+    border-bottom-color: rgba(0,0,0,0.55);
+}
+
+.footer-sep{
+    margin: 0 8px;
+    opacity: 0.55;
+}
+
+/* Prevent content from being hidden behind sticky footer */
+body{
+    padding-bottom: 76px; /* adjust if footer height changes */
+}
+
+/* Responsive: stack nicely on small screens */
+@media (max-width: 992px){
+    .footer-inner{
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .footer-en, .footer-he{
+        text-align: center;
+    }
+}
+</style>
+
 
