@@ -154,3 +154,12 @@ html, body {
   overflow-x: hidden;
 }
 
+.site-footer {
+    font-size: 0.95rem;
+    color: #6c757d;
+}
+
+.hebrew-name {
+    font-family: inherit;
+}
+
