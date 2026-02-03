@@ -197,9 +197,14 @@ html, body {
     font-size: 0.95rem;
     line-height: 1.2;
     color: rgba(0,0,0,0.75);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+}
+
+/* Optional: make sure the Hebrew column can shrink/wrap properly */
+.footer-he, .footer-en{
+    min-width: 0;
 }
 
 .footer-en{ text-align: left; }
